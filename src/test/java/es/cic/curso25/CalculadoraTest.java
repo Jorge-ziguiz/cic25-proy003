@@ -28,10 +28,10 @@ public class CalculadoraTest {
     @Test
     public void restar() {
         cut.reiniciarTotal();
-        cut.restar(3);
+        cut.restar(30);
         double valorActual =  cut.getTotal();
-        assertEquals(valorActual, -3);
-
+        valorActual =  cut.getTotal();
+        assertEquals(valorActual, -30,0.000001);
     }
 
     @Test
@@ -40,7 +40,8 @@ public class CalculadoraTest {
         cut.sumar(15);
         cut.dividir(3);
         double valorActual =  cut.getTotal();
-        assertEquals(valorActual, 5);
+        assertEquals(valorActual, 5,0.000001);
+       
     }
 
     @Test
@@ -49,7 +50,7 @@ public class CalculadoraTest {
         cut.sumar(5);
         cut.multiplicar(3);
         double valorActual =  cut.getTotal();
-        assertEquals(valorActual, 15);
+        assertEquals(valorActual, 15,0.000001);
     }
 
 }

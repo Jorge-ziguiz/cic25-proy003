@@ -24,10 +24,14 @@ public class Calculadora extends Object {
     }
 
     public void dividir(double valor) {
+
+        // en caso de no usar un bloque try catch throw new ArithmeticException ("no es valido la division por 0"); si no en un if 
         try {
+
             total = total /valor;
+            
         } catch (ArithmeticException e) {
-            e.printStackTrace();
+           
         }
     }
 }
