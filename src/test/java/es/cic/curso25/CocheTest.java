@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
+//import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class CocheTest {
@@ -30,7 +30,6 @@ public class CocheTest {
     @Test
     void testFrenar() {
         cut.acelerar(18);
-        cut.frenar(9);
         int velocidadFinal = cut.frenar(9);
         assertEquals(9, velocidadFinal);
     }

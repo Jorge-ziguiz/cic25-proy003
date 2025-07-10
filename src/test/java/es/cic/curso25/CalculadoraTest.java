@@ -29,9 +29,9 @@ public class CalculadoraTest {
     public void restar() {
         cut.reiniciarTotal();
         cut.restar(30);
-        double valorActual =  cut.getTotal();
-        valorActual =  cut.getTotal();
-        assertEquals(valorActual, -30,0.000001);
+        double valorActual = cut.getTotal();
+        valorActual = cut.getTotal();
+        assertEquals(valorActual, -30, 0.000001);
     }
 
     @Test
@@ -39,9 +39,9 @@ public class CalculadoraTest {
         cut.reiniciarTotal();
         cut.sumar(15);
         cut.dividir(3);
-        double valorActual =  cut.getTotal();
-        assertEquals(valorActual, 5,0.000001);
-       
+        double valorActual = cut.getTotal();
+        assertEquals(valorActual, 5, 0.000001);
+
     }
 
     @Test
@@ -49,8 +49,17 @@ public class CalculadoraTest {
         cut.reiniciarTotal();
         cut.sumar(5);
         cut.multiplicar(3);
-        double valorActual =  cut.getTotal();
-        assertEquals(valorActual, 15,0.000001);
+        double valorActual = cut.getTotal();
+        assertEquals(valorActual, 15, 0.000001);
+    }
+
+    @Test
+    public void reiniciarTotal() {
+        cut.sumar(10);
+        cut.reiniciarTotal();
+        double valorActual = cut.getTotal();
+        assertEquals(0, valorActual);
+
     }
 
 }
